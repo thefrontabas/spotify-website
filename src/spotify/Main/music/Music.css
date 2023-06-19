@@ -1,0 +1,352 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("font/AvenirLTStd-Light.otf");
+}
+.musicbox {
+  padding: 14px 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #1f1f1f 0%, #0f0f0f 44%);
+}
+.musicbox .bradbox {
+  width: 95%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+.musicbox .bradbox .item {
+  color: #bebebe;
+  text-decoration: none;
+}
+.musicbox .headerbox {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.musicbox .headerbox .arrowbox {
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+.musicbox .headerbox .arrowbox .back,
+.musicbox .headerbox .arrowbox .forw {
+  margin-right: 12px;
+  border-radius: 50px;
+  color: #e0e0e0;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  font-size: 21px;
+}
+.musicbox .headerbox .userbox {
+  flex: 1;
+  background-image: unset;
+}
+.musicbox .headerbox .userbox .user {
+  display: flex;
+  width: auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6431372549);
+  border-radius: 50px;
+  padding: 2px;
+  height: 30px;
+}
+.musicbox .headerbox .userbox .user .icon {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-radius: 50px;
+  text-align: center;
+  padding: 3px 2px;
+  width: 28px;
+  height: 100%;
+}
+.musicbox .headerbox .userbox .user .infobox {
+  color: #fff;
+  width: auto;
+  font-size: 15px;
+  padding-left: 8px;
+  font-family: AvenirLTStd-Heavy;
+  display: flex;
+  align-items: center;
+}
+.musicbox .headerbox .userbox .user .infobox .name {
+  padding-right: 8px;
+}
+.musicbox .headerbox .userbox .user .arrow ion-icon {
+  color: #fff;
+  font-size: 17px;
+}
+.musicbox .musichead {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 18rem;
+  padding-top: 15px;
+  padding-left: 27px;
+  padding-bottom: 10px;
+}
+.musicbox .musichead .cover {
+  flex: 1.4;
+  height: 93%;
+}
+.musicbox .musichead .cover img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(4px 5px 8px rgba(0, 0, 0, 0.231372549));
+  cursor: pointer;
+}
+.musicbox .musichead .infobox {
+  flex: 5;
+  text-align: left;
+  padding-top: 60px;
+  padding-left: 18px;
+}
+.musicbox .musichead .infobox .type {
+  font-family: AvenirLTStd-Heavy;
+  color: #e4e4e4;
+  font-size: 11px;
+  cursor: pointer;
+}
+.musicbox .musichead .infobox .name {
+  color: #e4e4e4;
+  font-size: 80px;
+  font-family: AvenirLTStd-Black;
+}
+.musicbox .musichead .infobox .infoflex {
+  display: flex;
+  align-items: center;
+}
+.musicbox .musichead .infobox .infoflex .singer {
+  font-family: AvenirLTStd-Black;
+  color: #e4e4e4;
+  padding-right: 8px;
+  font-size: 13.5px;
+}
+.musicbox .musichead .infobox .infoflex .year {
+  color: #e4e4e4;
+  font-family: AvenirLTStd-Light;
+  padding-right: 8px;
+  font-size: 14px;
+}
+.musicbox .musichead .infobox .infoflex .time {
+  color: #cccbcb;
+  font-family: AvenirLTStd-Light;
+  padding-right: 8px;
+  font-size: 14px;
+}
+.musicbox .musicfooter {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.3490196078) 0%, #0f0f0f 84%);
+  padding: 20px 25px;
+}
+.musicbox .musicfooter .playboxmusic {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 12%;
+}
+.musicbox .musicfooter .playboxmusic .play {
+  flex: 1;
+  padding-right: 25px;
+}
+.musicbox .musicfooter .playboxmusic .play ion-icon {
+  padding: 13px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #1db954;
+  text-align: center;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0));
+}
+.musicbox .musicfooter .playboxmusic .heart {
+  flex: 1;
+  color: #adadad;
+  font-size: 40px;
+  cursor: pointer;
+}
+.musicbox .musicfooter .mainplayer {
+  width: 100%;
+  margin: 20px auto;
+  height: auto;
+  padding-bottom: 30px;
+}
+.musicbox .musicfooter .mainplayer .titlebox {
+  display: flex;
+  align-items: center;
+  margin: 3px auto;
+  width: 97%;
+  padding: 0px 25px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(182, 181, 181, 0.0901960784);
+}
+.musicbox .musicfooter .mainplayer .titlebox .text {
+  color: #b3aeae;
+  font-size: 14px;
+}
+.musicbox .musicfooter .mainplayer .titlebox .icon {
+  color: #b3aeae;
+  font-size: 20px;
+}
+.musicbox .musicfooter .mainplayer .mainbox:hover {
+  background-color: rgba(250, 250, 250, 0.1843137255);
+}
+.musicbox .musicfooter .mainplayer .mainbox:hover .firstbox .play {
+  color: #fff;
+}
+.musicbox .musicfooter .mainplayer .mainbox {
+  margin: 18px auto;
+  width: 95%;
+  padding: 6px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox .play {
+  color: #aaa7a7;
+  font-size: 18px;
+  padding-right: 15px;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox .number {
+  color: #aaa7a7;
+  font-size: 16px;
+  padding-right: 15px;
+  font-family: AvenirLTStd-Light;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox .infobox {
+  cursor: pointer;
+  text-align: left;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox .infobox .name {
+  color: #fff;
+  font-size: 15px;
+  font-family: AvenirLTStd-Heavy;
+}
+.musicbox .musicfooter .mainplayer .mainbox .firstbox .infobox .singer {
+  color: #aaa7a7;
+  font-size: 14px;
+  align-items: center;
+}
+.musicbox .musicfooter .mainplayer .mainbox .timebox {
+  color: #aaa7a7;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: AvenirLTStd-Light;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 1024px) {
+  .musicbox {
+    padding: 35px 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .musicbox .bradbox {
+    margin: 5px auto !important;
+    width: 90% !important;
+  }
+  .musichead {
+    height: auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    margin: 5px auto !important;
+    width: 94% !important;
+  }
+  .musichead .cover {
+    margin: 20px auto !important;
+    width: 50% !important;
+  }
+  .musichead .cover img {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .musichead .infobox {
+    padding-top: 0 !important;
+  }
+  .musichead .infobox .type {
+    font-size: 15px !important;
+  }
+  .musichead .infobox .name {
+    padding: 15px 0 !important;
+    font-size: 30px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .musicfooter {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 15px !important;
+  }
+  .musicfooter .playboxmusic {
+    width: 15% !important;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 400px) {
+  .musichead .infobox .name {
+    font-size: 27px !important;
+  }
+  .mainplayer .mainbox .firstbox .name {
+    font-size: 13px !important;
+  }
+}
+.messbox {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  margin: 0px auto;
+  z-index: 300;
+}
+.messbox .text {
+  background-color: #2567e2;
+  color: rgba(255, 255, 255, 0.8117647059);
+  border-radius: 7px;
+  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.3137254902));
+  cursor: pointer;
+  padding: 10px 20px;
+  width: auto;
+}
+
+#anim {
+  animation: animheart ease 1s;
+}
+
+@keyframes animheart {
+  0% {
+    font-size: 35px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+#hide {
+  opacity: 0;
+  transition: all ease 1.5s;
+}/*# sourceMappingURL=Music.css.map */

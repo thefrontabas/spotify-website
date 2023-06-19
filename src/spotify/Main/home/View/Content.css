@@ -1,0 +1,445 @@
+@font-face {
+	font-family: AvenirLTStd-Heavy;
+	src: url("../font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+	font-family: AvenirLTStd-Black;
+	src: url("../font/AvenirLTStd-Black.otf");
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(241, 241, 241, 0);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #a09f9f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.contentbox,
+.musicbox,
+.singerbox {
+	background: linear-gradient(180deg, #1b1b1b 0%, rgb(12, 12, 12) 100%);
+	padding: 14px 20px;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.contentbox .loadbox,
+.musicbox .loadbox,
+.singerbox .loadbox {
+	text-align: center;
+	position: fixed;
+	right: 0;
+	width: 82%;
+	z-index: 300;
+	height: 100%;
+	padding-top: 14rem;
+}
+.contentbox .loadbox img,
+.musicbox .loadbox img,
+.singerbox .loadbox img {
+	width: 70px;
+	cursor: pointer;
+}
+.contentbox .headerbox,
+.musicbox .headerbox,
+.singerbox .headerbox {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.contentbox .headerbox .arrowbox,
+.musicbox .headerbox .arrowbox,
+.singerbox .headerbox .arrowbox {
+	flex: 6;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	cursor: pointer;
+}
+.contentbox .headerbox .arrowbox .back,
+.contentbox .headerbox .arrowbox .forw,
+.musicbox .headerbox .arrowbox .back,
+.musicbox .headerbox .arrowbox .forw,
+.singerbox .headerbox .arrowbox .back,
+.singerbox .headerbox .arrowbox .forw {
+	margin-right: 12px;
+	border-radius: 50px;
+	color: #e0e0e0;
+	padding-top: 3px;
+	padding-bottom: 1px;
+	padding-right: 8px;
+	padding-left: 8px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5960784314);
+	font-size: 21px;
+}
+.contentbox .headerbox .userbox,
+.musicbox .headerbox .userbox,
+.singerbox .headerbox .userbox {
+	flex: 1;
+	background-image: unset;
+	cursor: pointer;
+}
+.contentbox .headerbox .userbox .logoutbox,
+.musicbox .headerbox .userbox .logoutbox,
+.singerbox .headerbox .userbox .logoutbox {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	background-color: #292828;
+	border-radius: 3px;
+	width: 10rem;
+	height: 2.7rem;
+	cursor: pointer;
+	padding: 5px 0;
+	color: #d3d2d2;
+}
+.contentbox .headerbox .userbox .logoutbox .logout,
+.musicbox .headerbox .userbox .logoutbox .logout,
+.singerbox .headerbox .userbox .logoutbox .logout {
+	padding: 4px 10px;
+	width: 100%;
+	height: 30px;
+}
+.contentbox .headerbox .userbox .logoutbox .logout:hover,
+.musicbox .headerbox .userbox .logoutbox .logout:hover,
+.singerbox .headerbox .userbox .logoutbox .logout:hover {
+	background-color: rgba(104, 104, 104, 0.1921568627);
+	transition: all ease 0.5s;
+}
+.contentbox .headerbox .userbox .user,
+.musicbox .headerbox .userbox .user,
+.singerbox .headerbox .userbox .user {
+	display: flex;
+	width: auto;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.6431372549);
+	border-radius: 50px;
+	padding: 2px;
+	height: 30px;
+	justify-content: space-between;
+}
+.contentbox .headerbox .userbox .user .icon,
+.musicbox .headerbox .userbox .user .icon,
+.singerbox .headerbox .userbox .user .icon {
+	color: #fff;
+	background-color: #5e5e5e;
+	border-radius: 50px;
+	text-align: center;
+	padding: 3px 2px;
+	width: 28px;
+	height: 100%;
+}
+.contentbox .headerbox .userbox .user .infobox,
+.musicbox .headerbox .userbox .user .infobox,
+.singerbox .headerbox .userbox .user .infobox {
+	color: #fff;
+	width: auto;
+	font-size: 15px;
+	padding-left: 8px;
+	font-family: AvenirLTStd-Heavy;
+	display: flex;
+	align-items: center;
+}
+.contentbox .headerbox .userbox .user .infobox .name,
+.musicbox .headerbox .userbox .user .infobox .name,
+.singerbox .headerbox .userbox .user .infobox .name {
+	padding-right: 8px;
+}
+.contentbox .headerbox .userbox .user .arrow ion-icon,
+.musicbox .headerbox .userbox .user .arrow ion-icon,
+.singerbox .headerbox .userbox .user .arrow ion-icon {
+	color: #fff;
+	font-size: 17px;
+}
+.contentbox .welbox,
+.musicbox .welbox,
+.singerbox .welbox {
+	width: 100%;
+	margin: 35px 0px;
+	height: auto;
+	padding-bottom: 25px;
+}
+.contentbox .welbox .welhead,
+.musicbox .welbox .welhead,
+.singerbox .welbox .welhead {
+	color: #fff;
+	font-family: AvenirLTStd-Black;
+	font-size: 30px;
+	text-align: left;
+}
+.contentbox .welbox .welflex,
+.musicbox .welbox .welflex,
+.singerbox .welbox .welflex {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.contentbox .welbox .welflex .welmusic:hover .play #icon,
+.musicbox .welbox .welflex .welmusic:hover .play #icon,
+.singerbox .welbox .welflex .welmusic:hover .play #icon {
+	opacity: 1;
+	transition: all ease-in 0.8s;
+}
+.contentbox .welbox .welflex .welmusic:hover,
+.musicbox .welbox .welflex .welmusic:hover,
+.singerbox .welbox .welflex .welmusic:hover {
+	background-color: rgba(85, 84, 84, 0.6588235294);
+}
+.contentbox .welbox .welflex .welmusic,
+.musicbox .welbox .welflex .welmusic,
+.singerbox .welbox .welflex .welmusic {
+	margin-right: 15px;
+	margin-top: 14px;
+	flex: 31%;
+	border-radius: 4px;
+	background-color: rgba(73, 73, 73, 0.4235294118);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	height: 74px;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1529411765));
+}
+.contentbox .welbox .welflex .welmusic .cover,
+.musicbox .welbox .welflex .welmusic .cover,
+.singerbox .welbox .welflex .welmusic .cover {
+	flex: 0.6;
+	height: 100%;
+}
+.contentbox .welbox .welflex .welmusic .cover img,
+.musicbox .welbox .welflex .welmusic .cover img,
+.singerbox .welbox .welflex .welmusic .cover img {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	filter: drop-shadow(4px 4px 9px rgba(0, 0, 0, 0.2470588235));
+}
+.contentbox .welbox .welflex .welmusic .infobox,
+.musicbox .welbox .welflex .welmusic .infobox,
+.singerbox .welbox .welflex .welmusic .infobox {
+	padding-left: 10px;
+	color: #fff;
+	flex: 1.5;
+	font-family: AvenirLTStd-Heavy;
+	font-size: 14px;
+}
+.contentbox .welbox .welflex .welmusic .infobox .name,
+.musicbox .welbox .welflex .welmusic .infobox .name,
+.singerbox .welbox .welflex .welmusic .infobox .name {
+	color: #fff;
+}
+.contentbox .welbox .welflex .welmusic .play,
+.musicbox .welbox .welflex .welmusic .play,
+.singerbox .welbox .welflex .welmusic .play {
+	flex: 0.5;
+}
+.contentbox .welbox .welflex .welmusic .play #icon,
+.musicbox .welbox .welflex .welmusic .play #icon,
+.singerbox .welbox .welflex .welmusic .play #icon {
+	color: #0f0f0f;
+	opacity: 0;
+	font-size: 25px;
+	text-align: center;
+	padding: 11px;
+	background-color: #1db954;
+	border-radius: 50px;
+}
+.contentbox .welbox .welflex .welmusic .play #action,
+.musicbox .welbox .welflex .welmusic .play #action,
+.singerbox .welbox .welflex .welmusic .play #action {
+	color: #0f0f0f;
+	font-size: 25px;
+	text-align: center;
+	padding: 11px;
+	background-color: #1db954;
+	border-radius: 50px;
+}
+.contentbox .generbox,
+.musicbox .generbox,
+.singerbox .generbox {
+	width: 100% !important;
+	margin: 35px 0;
+	height: 17rem;
+	padding: 0;
+}
+.contentbox .generbox .generhead,
+.musicbox .generbox .generhead,
+.singerbox .generbox .generhead {
+	color: #ffffff;
+	font-size: 21px;
+	font-family: AvenirLTStd-Black;
+	padding-bottom: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 99%;
+}
+.contentbox .generbox .generhead .seeall,
+.musicbox .generbox .generhead .seeall,
+.singerbox .generbox .generhead .seeall {
+	color: #a7a7a7;
+	font-size: 12px;
+	font-family: AvenirLTStd-Heavy;
+	cursor: pointer;
+	text-decoration: none;
+}
+.contentbox .generbox .generhead .seeall:hover,
+.musicbox .generbox .generhead .seeall:hover,
+.singerbox .generbox .generhead .seeall:hover {
+	text-decoration: underline;
+}
+.contentbox .generbox .generswiper,
+.musicbox .generbox .generswiper,
+.singerbox .generbox .generswiper {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.contentbox .generbox .generswiper .generslide:hover .play #icon,
+.musicbox .generbox .generswiper .generslide:hover .play #icon,
+.singerbox .generbox .generswiper .generslide:hover .play #icon {
+	opacity: 1;
+	transition: all ease-out 1s;
+}
+.contentbox .generbox .generswiper .generslide:hover,
+.musicbox .generbox .generswiper .generslide:hover,
+.singerbox .generbox .generswiper .generslide:hover {
+	background-color: #1f1e1e;
+	transition: all ease 1s;
+}
+.contentbox .generbox .generswiper .generslide,
+.musicbox .generbox .generswiper .generslide,
+.singerbox .generbox .generswiper .generslide {
+	width: 9.5rem !important;
+	border-radius: 6px;
+	height: 13rem;
+	background-color: #181818;
+	margin-right: 22px;
+	filter: drop-shadow(1px 2px 18px rgba(24, 24, 24, 0.6862745098));
+	cursor: pointer;
+	padding: 12px;
+}
+.contentbox .generbox .generswiper .generslide .play,
+.musicbox .generbox .generswiper .generslide .play,
+.singerbox .generbox .generswiper .generslide .play {
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+	right: 0px;
+}
+.contentbox .generbox .generswiper .generslide .play #icon,
+.musicbox .generbox .generswiper .generslide .play #icon,
+.singerbox .generbox .generswiper .generslide .play #icon {
+	color: #0f0f0f;
+	opacity: 0;
+	font-size: 25px;
+	text-align: center;
+	padding: 11px;
+	background-color: #1db954;
+	border-radius: 50px;
+}
+.contentbox .generbox .generswiper .generslide .play #action,
+.musicbox .generbox .generswiper .generslide .play #action,
+.singerbox .generbox .generswiper .generslide .play #action {
+	color: #0f0f0f;
+	font-size: 25px;
+	text-align: center;
+	padding: 11px;
+	background-color: #1db954;
+	border-radius: 50px;
+}
+.contentbox .generbox .generswiper .generslide .cover,
+.musicbox .generbox .generswiper .generslide .cover,
+.singerbox .generbox .generswiper .generslide .cover {
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+}
+.contentbox .generbox .generswiper .generslide .cover img,
+.musicbox .generbox .generswiper .generslide .cover img,
+.singerbox .generbox .generswiper .generslide .cover img {
+	cursor: pointer;
+	width: 100%;
+	height: 8rem;
+	border-radius: 3px;
+	filter: drop-shadow(1px 5px 12px rgba(0, 0, 0, 0.555));
+}
+.contentbox .generbox .generswiper .generslide .infobox,
+.musicbox .generbox .generswiper .generslide .infobox,
+.singerbox .generbox .generswiper .generslide .infobox {
+	text-align: left;
+	padding-top: 6px;
+}
+.contentbox .generbox .generswiper .generslide .infobox .name,
+.contentbox .generbox .generswiper .generslide .infobox .singer:hover,
+.musicbox .generbox .generswiper .generslide .infobox .name,
+.musicbox .generbox .generswiper .generslide .infobox .singer:hover,
+.singerbox .generbox .generswiper .generslide .infobox .name,
+.singerbox .generbox .generswiper .generslide .infobox .singer:hover {
+	text-decoration: underline;
+}
+.contentbox .generbox .generswiper .generslide .infobox .name,
+.musicbox .generbox .generswiper .generslide .infobox .name,
+.singerbox .generbox .generswiper .generslide .infobox .name {
+	color: #fff;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: AvenirLTStd-Heavy;
+	text-decoration: none;
+}
+.contentbox .generbox .generswiper .generslide .infobox .singer,
+.musicbox .generbox .generswiper .generslide .infobox .singer,
+.singerbox .generbox .generswiper .generslide .infobox .singer {
+	color: #969696;
+	font-size: 13px;
+	padding-top: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+	.headerbox {
+		display: none !important;
+	}
+	.contentbox {
+		width: 100% !important;
+		height: 69rem !important;
+	}
+	.contentbox .welbox {
+		margin: 70px 10px !important;
+	}
+	.contentbox .generbox {
+		margin: 40px 10px !important;
+	}
+	.welbox {
+		margin-top: 70px !important;
+	}
+	.welbox .welmusic {
+		height: 40px !important;
+	}
+	.welbox .welmusic .infobox {
+		font-size: 11px !important;
+	}
+	.welbox .welmusic .play ion-icon {
+		padding: 5px !important;
+		font-size: 14px !important;
+	}
+	.loadbox {
+		width: 100% !important;
+	}
+} /*# sourceMappingURL=Content.css.map */

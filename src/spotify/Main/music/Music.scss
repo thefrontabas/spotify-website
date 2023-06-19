@@ -1,0 +1,364 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("font/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("font/AvenirLTStd-Light.otf");
+}
+
+.musicbox {
+  padding: 14px 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #1f1f1f 0%, #0f0f0f 44%);
+  .bradbox {
+    width: 95%;
+    padding-top: 30px;
+    margin: 0 auto;
+    .item {
+      color: #bebebe;
+      text-decoration: none;
+    }
+  }
+  .headerbox {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    .arrowbox {
+      flex: 6;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      cursor: pointer;
+      .back,
+      .forw {
+        margin-right: 12px;
+        border-radius: 50px;
+        color: #e0e0e0;
+        padding-top: 3px;
+        padding-bottom: 1px;
+        padding-right: 8px;
+        padding-left: 8px;
+        text-align: center;
+        background-color: #00000098;
+        font-size: 21px;
+      }
+    }
+
+    .userbox {
+      flex: 1;
+      background-image: unset;
+      .user {
+        display: flex;
+        width: auto;
+        align-items: center;
+        background-color: #000000a4;
+        border-radius: 50px;
+        padding: 2px;
+        height: 30px;
+        .icon {
+          color: #fff;
+          background-color: #5e5e5e;
+          border-radius: 50px;
+          text-align: center;
+          padding: 3px 2px;
+          width: 28px;
+          height: 100%;
+        }
+        .infobox {
+          color: #fff;
+          width: auto;
+          font-size: 15px;
+          padding-left: 8px;
+          font-family: AvenirLTStd-Heavy;
+          display: flex;
+          align-items: center;
+          .name {
+            padding-right: 8px;
+          }
+        }
+        .arrow {
+          ion-icon {
+            color: #fff;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+  .musichead {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 18rem;
+    padding-top: 15px;
+    padding-left: 27px;
+    padding-bottom: 10px;
+    .cover {
+      flex: 1.4;
+      height: 93%;
+      img {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(4px 5px 8px #0000003b);
+        cursor: pointer;
+      }
+    }
+    .infobox {
+      flex: 5;
+      text-align: left;
+      padding-top: 60px;
+      padding-left: 18px;
+      .type {
+        font-family: AvenirLTStd-Heavy;
+        color: #e4e4e4;
+        font-size: 11px;
+        cursor: pointer;
+      }
+      .name {
+        color: #e4e4e4;
+        font-size: 80px;
+        font-family: AvenirLTStd-Black;
+      }
+      .infoflex {
+        display: flex;
+        align-items: center;
+        .singer {
+          font-family: AvenirLTStd-Black;
+          color: #e4e4e4;
+          padding-right: 8px;
+          font-size: 13.5px;
+        }
+
+        .year {
+          color: #e4e4e4;
+          font-family: AvenirLTStd-Light;
+          padding-right: 8px;
+          font-size: 14px;
+        }
+        .time {
+          color: #cccbcb;
+          font-family: AvenirLTStd-Light;
+          padding-right: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .musicfooter {
+    text-align: left;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #0a0a0a59 0%, #0f0f0f 84%);
+    padding: 20px 25px;
+    .playboxmusic {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 12%;
+      .play {
+        flex: 1;
+        padding-right: 25px;
+        ion-icon {
+          padding: 13px;
+          color: #000;
+          border-radius: 50px;
+          font-size: 25px;
+          cursor: pointer;
+          background-color: #1db954;
+          text-align: center;
+          filter: drop-shadow(2px 2px 5px #0000);
+        }
+      }
+      .heart {
+        flex: 1;
+        color: #adadad;
+        font-size: 40px;
+        cursor: pointer;
+      }
+    }
+    .mainplayer {
+      width: 100%;
+      margin: 20px auto;
+      height: auto;
+      padding-bottom: 30px;
+      .titlebox {
+        display: flex;
+        align-items: center;
+        margin: 3px auto;
+        width: 97%;
+        padding: 0px 25px;
+        justify-content: space-between;
+        border-bottom: 1px solid #b6b5b517;
+        .text {
+          color: #b3aeae;
+          font-size: 14px;
+        }
+        .icon {
+          color: #b3aeae;
+          font-size: 20px;
+        }
+      }
+      .mainbox:hover {
+        background-color: #fafafa2f;
+      }
+
+      .mainbox:hover .firstbox .play {
+        color: #fff;
+      }
+      .mainbox {
+        margin: 18px auto;
+        width: 95%;
+        padding: 6px 20px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .firstbox {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          .play {
+            color: #aaa7a7;
+            font-size: 18px;
+            padding-right: 15px;
+          }
+          .number {
+            color: #aaa7a7;
+            font-size: 16px;
+            padding-right: 15px;
+            font-family: AvenirLTStd-Light;
+          }
+          .infobox {
+            cursor: pointer;
+            text-align: left;
+            .name {
+              color: #fff;
+              font-size: 15px;
+              font-family: AvenirLTStd-Heavy;
+            }
+            .singer {
+              color: #aaa7a7;
+              font-size: 14px;
+              align-items: center;
+            }
+          }
+        }
+        .timebox {
+          color: #aaa7a7;
+          font-size: 14px;
+          cursor: pointer;
+          font-family: AvenirLTStd-Light;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 1024px) {
+  .musicbox {
+    padding: 35px 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    .bradbox {
+      margin: 5px auto !important;
+      width: 90% !important;
+    }
+  }
+  .musichead {
+    height: auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    margin: 5px auto !important;
+    width: 94% !important;
+    .cover {
+      margin: 20px auto !important;
+      width: 50% !important;
+      img {
+        width: 100% !important;
+        height: 50% !important;
+      }
+    }
+    .infobox {
+      padding-top: 0 !important;
+      .type {
+        font-size: 15px !important;
+      }
+      .name {
+        padding: 15px 0 !important;
+        font-size: 30px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .musicfooter {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 15px !important;
+    .playboxmusic {
+      width: 15% !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 400px) {
+  .musichead .infobox .name {
+    font-size: 27px !important;
+  }
+  .mainplayer .mainbox .firstbox .name {
+    font-size: 13px !important;
+  }
+}
+
+.messbox {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  margin: 0px auto;
+  // left: 50%;
+  z-index: 300;
+  .text {
+    background-color: #2567e2;
+    color: #ffffffcf;
+    border-radius: 7px;
+    filter: drop-shadow(2px 3px 4px #00000050);
+    cursor: pointer;
+    padding: 10px 20px;
+    width: auto;
+  }
+}
+#anim {
+  animation: animheart ease 1s;
+}
+
+@keyframes animheart {
+  0% {
+    font-size: 35px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+#hide {
+  opacity: 0;
+  transition: all ease 1.5s;
+}

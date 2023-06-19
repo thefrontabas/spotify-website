@@ -1,0 +1,399 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../font/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("../font/AvenirLTStd-Light.otf");
+}
+.playlistbox {
+  padding: 14px 0;
+  height: 100% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #56275f 0%, #0f0f0f 84%);
+
+  .headerbox {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    .arrowbox {
+      flex: 6;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      cursor: pointer;
+      .back,
+      .forw {
+        margin-right: 12px;
+        border-radius: 50px;
+        color: #e0e0e0;
+        padding-top: 3px;
+        padding-bottom: 1px;
+        padding-right: 8px;
+        padding-left: 8px;
+        text-align: center;
+        background-color: #00000098;
+        font-size: 21px;
+      }
+    }
+
+    .userbox {
+      flex: 1;
+      background-image: unset;
+      .user {
+        display: flex;
+        width: 166px;
+        align-items: center;
+        background-color: #000000a4;
+        border-radius: 50px;
+        padding: 2px;
+        height: 30px;
+        justify-content: space-between;
+        .icon {
+          color: #fff;
+          background-color: #5e5e5e;
+          border-radius: 50px;
+          text-align: center;
+          padding: 3px 2px;
+          width: 28px;
+          height: 100%;
+        }
+        .infobox {
+          color: #fff;
+          width: auto;
+          font-size: 15px;
+          padding-left: 8px;
+          font-family: AvenirLTStd-Heavy;
+          display: flex;
+          align-items: center;
+          .name {
+            padding-right: 8px;
+          }
+        }
+        .arrow {
+          ion-icon {
+            color: #fff;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .singerhead {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 16rem;
+    padding-top: 15px;
+    padding-left: 27px;
+    cursor: pointer;
+
+    .cover {
+      flex: 1.4;
+      height: 93%;
+      img {
+        width: 90%;
+        height: 95%;
+        filter: drop-shadow(4px 5px 8px #0000003b);
+      }
+    }
+    .infobox {
+      flex: 5;
+      text-align: left;
+      cursor: pointer;
+      .veribox {
+        font-family: AvenirLTStd-Heavy;
+        color: #ffffff;
+        font-size: 11px;
+      }
+      .name {
+        color: #ffffff;
+        font-family: AvenirLTStd-Black;
+        font-weight: bold;
+      }
+      .desc {
+        font-family: AvenirLTStd-Heavy;
+        font-size: 13px;
+        font-weight: 100;
+        color: #e4e4e467;
+      }
+      .listenbox {
+        display: flex;
+        align-items: center;
+        font-family: AvenirLTStd-Heavy;
+        padding-top: 10px;
+        div {
+          width: auto;
+          padding-right: 7px;
+          font-size: 13px;
+          color: #e4e4e4;
+        }
+      }
+    }
+  }
+  .playlistfooter {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0a0a0a27 0%, #0f0f0f 84%);
+    padding: 20px 25px;
+    .playboxmusic {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 12%;
+      .play {
+        flex: 1;
+        padding-right: 25px;
+        ion-icon {
+          padding: 13px;
+          color: #000;
+          border-radius: 50px;
+          font-size: 25px;
+          cursor: pointer;
+          background-color: #1ed760;
+          text-align: center;
+          filter: drop-shadow(2px 2px 5px #0000);
+        }
+      }
+      .heart {
+        flex: 1;
+        color: #adadad;
+        font-size: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .trackbox {
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    .titlebox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 0.5px solid #7575754d;
+      cursor: pointer;
+      padding-bottom: 8px;
+      .firstbox {
+        flex: 1.5;
+      }
+      div {
+        font-family: AvenirLTStd-Heavy;
+        font-size: 12px;
+        color: #999999;
+        ion-icon {
+          font-size: 20px;
+        }
+      }
+      .twobox {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .tracklist {
+      margin: 20px auto;
+      width: 100%;
+      height: auto;
+      .track:hover {
+        background-color: #adadad2f;
+      }
+      .track:hover .firstbox .play {
+        color: #fff;
+      }
+      .track {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 6px 8px;
+        .firstbox {
+          display: flex;
+          align-items: center;
+          flex: 1.5;
+          .play {
+            color: #ffffff92;
+            font-family: AvenirLTStd-Heavy;
+            font-size: 16px;
+          }
+          .number {
+            color: #ffffff92;
+            font-family: AvenirLTStd-Heavy;
+            font-size: 15px;
+          }
+          .cover {
+            padding-left: 15px;
+          }
+          .infobox {
+            padding-left: 14px;
+            .name {
+              display: inline-block;
+              overflow: hidden;
+              height: 15px;
+              font-size: 13.2px;
+              max-width: 100%;
+              font-family: AvenirLTStd-Heavy;
+            }
+            .singer {
+              color: #ffffff7d;
+              font-family: AvenirLTStd-Heavy;
+              font-size: 12px;
+              display: flex;
+              align-items: center;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+        }
+        .albumbox {
+          color: #ffffff9c;
+          font-family: AvenirLTStd-Heavy;
+          font-size: 12px;
+          flex: 1.1;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          text-align: left;
+        }
+        .datebox {
+          flex: 1;
+          color: #ffffff9c;
+          font-family: AvenirLTStd-Heavy;
+          font-size: 12px;
+        }
+        .timebox {
+          color: #ffffff9c;
+          font-family: AvenirLTStd-Heavy;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 200px) and (max-width: 1024px) {
+//   .playlistbox {
+//     margin-top: 350px !important;
+//     .headerbox {
+//       background-color: red;
+//     }
+//   }
+
+//   .playlistfooter .titlebox {
+//     display: none !important;
+//   }
+//   .playlistfooter .track .albumbox,
+//   .playlistfooter .track .datebox,
+//   .playlistfooter .track .singer {
+//     display: none !important;
+//   }
+// }
+
+@media only screen and (min-width: 250px) and (max-width: 1024px) {
+  .singerhead {
+    height: auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    margin: 55px auto !important;
+    width: 94% !important;
+    .cover {
+      margin: 20px auto !important;
+      width: 50% !important;
+      img {
+        width: 100% !important;
+        height: 50% !important;
+      }
+    }
+    .infobox {
+      padding-top: 0 !important;
+      .type {
+        font-size: 15px !important;
+      }
+      .name {
+        padding: 15px 0 !important;
+        font-size: 30px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .playlistfooter {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 15px !important;
+    .albumbox,
+    .datebox,
+    .timebox {
+      display: none;
+    }
+  }
+
+  .album,
+  .date,
+  .time {
+    display: none !important;
+  }
+}
+
+// @media only screen and (min-width: 250px) and (max-width: 400px) {
+//   .musichead .infobox .name {
+//     font-size: 27px !important;
+//   }
+//   .mainplayer .mainbox .firstbox .name {
+//     font-size: 13px !important;
+//   }
+// }
+
+// .messbox {
+//   position: absolute;
+//   bottom: 10%;
+//   text-align: center;
+//   margin: 0px auto;
+//   // left: 50%;
+//   z-index: 300;
+//   .text {
+//     background-color: #2567e2;
+//     color: #ffffffcf;
+//     border-radius: 7px;
+//     filter: drop-shadow(2px 3px 4px #00000050);
+//     cursor: pointer;
+//     padding: 10px 20px;
+//     width: auto;
+//   }
+// }
+// #anim {
+//   animation: animheart ease 1s;
+// }
+
+// @keyframes animheart {
+//   0% {
+//     font-size: 35px;
+//   }
+//   100% {
+//     font-size: 40px;
+//   }
+// }
+// #hide {
+//   opacity: 0;
+//   transition: all ease 1.5s;
+// }

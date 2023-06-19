@@ -1,0 +1,194 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../font/AvenirLTStd-Heavy.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../font/AvenirLTStd-Black.otf");
+}
+
+.userbox {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(backmain.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .headbox {
+    padding-top: 12px;
+    margin: 0px auto;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .btnbox {
+      button {
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 1px solid #ffffff38;
+        padding: 11px 17px;
+        background-color: inherit;
+        font-family: AvenirLTStd-Heavy;
+      }
+
+      button:hover {
+        background-color: #ffffff0e;
+        transition: all ease 1s;
+      }
+
+      #hide {
+        opacity: 0;
+        transition: all ease-in 0.7s;
+      }
+    }
+  }
+
+  #animation {
+    animation: animuser 1.6s ease;
+  }
+
+  @keyframes animuser {
+    50% {
+      transform: translateX(30px);
+      opacity: 0.4;
+    }
+
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  #hide {
+    opacity: 0;
+    transition: all ease-in 0.7s;
+  }
+
+  .signupbox,
+  .loginbox {
+    margin: 2.8rem auto;
+    width: 35%;
+    height: 100%;
+    cursor: pointer;
+
+    .head {
+      font-family: AvenirLTStd-Black;
+      color: #fff;
+      font-size: 34px;
+      font-weight: 800;
+      text-align: center;
+      width: 100%;
+    }
+
+    .formbox {
+      width: 100%;
+      margin: 0px auto;
+      height: auto;
+
+      .formmain {
+        width: 100%;
+        padding: 0;
+        margin: 15px auto;
+        height: auto;
+
+        .errbox {
+          text-align: center;
+          padding-top: 10px;
+          color: #a8a8a8;
+        }
+
+        .errordiv {
+          color: #ca2c2c;
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+          height: 3px;
+        }
+
+        // .inputbox:hover {
+        //   outline: 1px solid #ffffffb2;
+        // }
+        .inputbox {
+          background-color: inherit;
+          width: inherit;
+          border: 1px solid #ffffff38;
+          padding: 5px 0px;
+          color: #fff;
+          height: 35px;
+          cursor: pointer;
+          border-radius: 6px;
+          margin-top: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+
+          .icon {
+            flex: 0.5;
+            padding-left: 20px;
+            color: #cccccc;
+          }
+
+          .input {
+            flex: 7;
+
+            input {
+              background-color: inherit !important;
+              width: 100%;
+              color: #fff;
+              height: 37px;
+              outline: none;
+              cursor: pointer;
+              border: 0 solid #ffffff38;
+            }
+          }
+        }
+
+        .submit:hover {
+          background-color: #2c2c2ccb;
+          transform: rotate(1deg);
+          transition: all ease 1s;
+        }
+
+        .submit {
+          height: 48px;
+          cursor: pointer;
+          width: 100%;
+          border-radius: 6px;
+          background-color: #252525cb;
+          padding: 10px;
+          font-size: 17px;
+          font-family: AvenirLTStd-Heavy;
+          color: #fff;
+          margin: 26px auto;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+  .userbox .headbox .btnbox button {
+    padding: 3px 5px !important;
+    width: 150px;
+  }
+
+  .signupbox,
+  .loginbox {
+    width: 65% !important;
+  }
+}

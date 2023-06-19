@@ -1,0 +1,405 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../home/font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../home/font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("../font/AvenirLTStd-Light.otf");
+}
+
+.searchbox {
+  background: linear-gradient(180deg, rgb(19, 18, 18) 0%, rgb(14, 13, 13) 100%);
+  padding: 14px 20px !important;
+  height: 100% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  .inpbox .searchinputbox {
+    display: none;
+  }
+  .headerbox,
+  .inpbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .arrowbox {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      cursor: pointer;
+      .back,
+      .forw {
+        margin-right: 12px;
+        border-radius: 50px;
+        color: #e0e0e0;
+        padding-top: 3px;
+        padding-bottom: 1px;
+        padding-right: 8px;
+        padding-left: 8px;
+        text-align: center;
+        background-color: #00000098;
+        font-size: 21px;
+      }
+    }
+
+    .searchinputbox {
+      flex: 10;
+      .inputbox {
+        border-radius: 50px;
+        cursor: pointer;
+        width: 44%;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 5px 8px;
+        height: 40px;
+        background-color: #fff;
+        .icon {
+          flex: 0.5;
+          font-size: 20px;
+          color: #000;
+        }
+        .input {
+          flex: 5;
+          input {
+            outline: none;
+            border: 0;
+            color: #000;
+          }
+          ::placeholder {
+            font-family: AvenirLTStd-Black;
+            font-size: 13px;
+            color: #777777;
+          }
+        }
+      }
+    }
+
+    .userbox {
+      flex: 1;
+      background-image: unset;
+      cursor: pointer;
+      .logoutbox {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background-color: #292828;
+        border-radius: 3px;
+        width: 10rem;
+        height: 2.7rem;
+        cursor: pointer;
+        padding: 5px 0;
+        color: #d3d2d2;
+        .logout {
+          padding: 4px 10px;
+          width: 100%;
+          height: 30px;
+        }
+        .logout:hover {
+          background-color: #68686831;
+          transition: all ease 0.5s;
+        }
+      }
+      .user {
+        display: flex;
+        width: auto;
+        align-items: center;
+        background-color: #000000a4;
+        border-radius: 50px;
+        padding: 2px;
+        justify-content: space-between;
+        height: 30px;
+        .icon {
+          color: #fff;
+          background-color: #5e5e5e;
+          border-radius: 50px;
+          text-align: center;
+          padding: 3px 2px;
+          width: 28px;
+          height: 100%;
+        }
+        .infobox {
+          color: #fff;
+          width: auto;
+          font-size: 15px;
+          padding-left: 8px;
+          font-family: AvenirLTStd-Heavy;
+          display: flex;
+          align-items: center;
+          .name {
+            padding-right: 8px;
+          }
+        }
+        .arrow {
+          ion-icon {
+            color: #fff;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 50px 0;
+    .topbox {
+      flex: 3.4;
+      .tophead {
+        font-family: AvenirLTStd-Black;
+        color: #ffff;
+        cursor: pointer;
+        text-align: left;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .topcard {
+        background-color: #181818;
+        border-radius: 4px;
+        filter: drop-shadow(2px 2px 5px #0000000a);
+        cursor: pointer;
+        text-align: left;
+        width: 100%;
+        height: auto;
+        padding: 21px 23px;
+        margin-top: 20px;
+        .cover {
+          width: 100px;
+          height: 100px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        .name {
+          color: #e0dddd;
+          font-weight: bold;
+          font-size: 26px;
+          padding: 10px 0;
+        }
+        .title {
+          color: #fff;
+          background-color: #00000046;
+          border-radius: 30px;
+          padding: 2px 5px;
+          width: 18%;
+          text-align: center;
+        }
+      }
+    }
+    .songbox {
+      flex: 5;
+      padding-left: 20px;
+      .songhead {
+        font-family: AvenirLTStd-Black;
+        color: #ffff;
+        cursor: pointer;
+        text-align: left;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .songcard {
+        padding-top: 15px;
+        width: 100%;
+        height: auto;
+        .song:hover {
+          background-color: #4d4d4d69;
+        }
+        .song {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 94%;
+          margin: 0px;
+          cursor: pointer;
+          border-radius: 3px;
+          padding: 3px 9px;
+          height: auto;
+          .cover {
+            flex: 0.5;
+            background-size: cover;
+            height: 40px;
+            background-position: center;
+            background-repeat: no-repeat;
+            .back {
+              background-color: #0000009f;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              display: none;
+              color: #fff;
+              font-size: 19px;
+              padding-top: 10px;
+              justify-content: center;
+            }
+          }
+          .infobox {
+            text-align: left;
+            flex: 5;
+            padding-left: 12px;
+            color: #fff;
+            .singer {
+              color: #aaaaaa;
+              font-size: 13px;
+              padding-top: 3px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .name {
+              color: #fff;
+              font-size: 15px;
+              font-family: AvenirLTStd-Light;
+              font-weight: 500;
+              height: 17px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .time {
+            color: #a0a0a0;
+            flex: 1;
+            font-size: 14px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .artbox {
+    width: 100%;
+    height: auto;
+    .arthead {
+      font-family: AvenirLTStd-Black;
+      color: #ffff;
+      cursor: pointer;
+      text-align: left;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    .generbox {
+      width: 100% !important;
+      margin: 15px 0;
+      height: 17rem;
+      padding: 0;
+
+      .generswiper {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        .generslide:hover .play #icon {
+          opacity: 1;
+          transition: all ease-out 1s;
+        }
+
+        .generslide:hover {
+          background-color: #1f1e1e;
+          transition: all ease 1s;
+        }
+        .generslide {
+          width: 9.5rem !important;
+          border-radius: 6px;
+          height: 13rem;
+          background-color: #181818;
+          margin-right: 22px;
+          -webkit-filter: drop-shadow(1px 2px 18px #1818188a);
+          filter: drop-shadow(1px 2px 18px #181818af);
+          cursor: pointer;
+          padding: 12px;
+
+          .cover {
+            width: 100%;
+            height: auto;
+            margin: 0px auto;
+            img {
+              cursor: pointer;
+              width: 100%;
+              height: 8rem;
+              border-radius: 3px;
+              filter: drop-shadow(1px 5px 12px rgba(0, 0, 0, 0.555));
+            }
+          }
+          .infobox {
+            text-align: left;
+            padding-top: 6px;
+            .name,
+            .singer:hover {
+              text-decoration: underline;
+            }
+            .name {
+              color: #fff;
+              font-size: 14px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-family: AvenirLTStd-Heavy;
+              text-decoration: none;
+            }
+            .singer {
+              color: #969696;
+              font-size: 13px;
+              padding-top: 3px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(min-width:250px) and (max-width: 1024px) {
+  .inpbox .searchinputbox {
+    display: inline-block !important;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+
+    .searchbox {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .flex {
+    flex-direction: column !important;
+    margin: 60px auto !important;
+    .songbox {
+      margin-top: 40px !important;
+      padding: 0 !important;
+      .song .name {
+        white-space: inherit !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+      }
+    }
+  }
+}
+.inpbox {
+  padding-top: 50px !important;
+  .inputbox {
+    width: 100% !important;
+    input {
+      width: 100% !important;
+    }
+  }
+}

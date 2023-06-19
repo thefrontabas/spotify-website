@@ -1,0 +1,77 @@
+.resmenu {
+  background-color: #010101;
+  padding: 25px 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66% !important;
+  z-index: 500;
+  height: 100rem;
+}
+.resmenu .logo {
+  padding-bottom: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resmenu .logo img {
+  width: 120px;
+  cursor: pointer;
+}
+.resmenu .logo div ion-icon {
+  color: #f1f1f1;
+  font-size: 30px;
+  cursor: pointer;
+}
+.resmenu .artbox {
+  text-align: left;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.resmenu .artbox .link:hover {
+  color: #fff;
+  transition: all ease 1s;
+}
+.resmenu .artbox .link {
+  display: flex;
+  font-family: AvenirLTStd-Heavy;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+  color: rgb(192, 192, 192);
+  font-size: 14px;
+}
+.resmenu .linkbox {
+  text-align: left;
+  padding-bottom: 20px;
+}
+.resmenu .linkbox .link:hover {
+  color: #fff;
+  transition: all ease 1s;
+}
+.resmenu .linkbox .link {
+  display: flex;
+  font-family: AvenirLTStd-Heavy;
+  align-items: center;
+  width: 100%;
+  margin-top: 9px;
+  color: #c0c0c0;
+  font-size: 14px;
+}
+.resmenu .linkbox .link .icon {
+  padding-right: 11px;
+  font-size: 25px;
+}
+.resmenu .linkbox .link a {
+  color: rgb(192, 192, 192);
+  font-size: 14px;
+  text-decoration: none;
+}
+.resmenu .border {
+  background-color: rgba(155, 155, 155, 0.185);
+  border: 0;
+  width: 91%;
+  height: 0.1px;
+}/*# sourceMappingURL=Resmenu.css.map */

@@ -1,0 +1,163 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("./font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("./font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("./font/AvenirLTStd-Light.otf");
+}
+.playbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 300;
+  background-color: #1a1a1a;
+}
+.playbox .firstbox {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+.playbox .firstbox .cover {
+  flex: 0.3;
+}
+.playbox .firstbox .cover img {
+  width: 90%;
+  height: 90%;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.231372549));
+}
+.playbox .firstbox .infobox {
+  text-align: left;
+  padding-left: 8px;
+  flex: 2;
+}
+.playbox .firstbox .infobox .name,
+.playbox .firstbox .infobox .singer:hover {
+  text-decoration: underline;
+}
+.playbox .firstbox .infobox .name {
+  color: #fff;
+  font-size: 13.4px;
+  font-family: AvenirLTStd-Heavy;
+  height: 17px;
+}
+.playbox .firstbox .infobox .singer {
+  color: #aaa7a7;
+  font-size: 12.8px;
+  align-items: center;
+}
+.playbox .mainbox {
+  flex: 2;
+}
+.playbox .mainbox .iconbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.playbox .mainbox .iconbox .back,
+.playbox .mainbox .iconbox .forw,
+.playbox .mainbox .iconbox .play {
+  color: #afaeae;
+  font-size: 22px;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+.playbox .mainbox .iconbox .back,
+.playbox .mainbox .iconbox .forw:hover {
+  color: #ebe6e6;
+}
+.playbox .mainbox .iconbox .play {
+  font-size: 33px;
+  color: #fff;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.2862745098));
+}
+.playbox .mainbox .timingbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.playbox .mainbox .timingbox .rangebox {
+  flex: 10;
+}
+.playbox .mainbox .timingbox .rangebox input[type=range] {
+  width: 100%;
+  height: 4px;
+  border: 0;
+  background-color: rgba(207, 40, 40, 0.8235294118);
+  accent-color: #dfdddd;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+}
+.playbox .mainbox .timingbox .rangebox input:hover {
+  accent-color: #1db954;
+  width: 100%;
+  height: 4px;
+  border: 0;
+  background-color: rgba(207, 40, 40, 0.8235294118);
+  border-radius: 25px;
+  background-repeat: no-repeat;
+}
+.playbox .mainbox .timingbox .rangebox input[type=range]::-webkit-slider-thumb {
+  background-color: red;
+  width: 55px;
+}
+.playbox .mainbox .timingbox .time {
+  color: grey;
+  font-size: 12px;
+}
+.playbox .soundbox {
+  flex: 2;
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.playbox .soundbox .icon {
+  color: #aca9a9;
+  font-size: 22px;
+  height: 20px;
+}
+.playbox .soundbox .volbox input[type=range] {
+  width: 90%;
+  height: 4px;
+  border: 0;
+  background-color: rgba(207, 40, 40, 0.8235294118);
+  accent-color: #dfdddd;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 800px) {
+  .playbox .firstbox {
+    flex: 4 !important;
+  }
+  .playbox .firstbox .cover {
+    flex: 0.6 !important;
+  }
+  .playbox .soundbox {
+    display: none !important;
+  }
+  .playbox .mainbox .timingbox {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 820px) and (max-width: 1025px) {
+  .playbox .firstbox {
+    flex: 2.5 !important;
+  }
+  .playbox .firstbox .cover {
+    flex: 0.4 !important;
+  }
+}/*# sourceMappingURL=Player.css.map */

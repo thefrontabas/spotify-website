@@ -1,0 +1,328 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("../font/AvenirLTStd-Light.otf");
+}
+.playlistbox {
+  padding: 14px 0;
+  height: 100% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #56275f 0%, #0f0f0f 84%);
+}
+.playlistbox .headerbox {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.playlistbox .headerbox .arrowbox {
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+.playlistbox .headerbox .arrowbox .back,
+.playlistbox .headerbox .arrowbox .forw {
+  margin-right: 12px;
+  border-radius: 50px;
+  color: #e0e0e0;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  font-size: 21px;
+}
+.playlistbox .headerbox .userbox {
+  flex: 1;
+  background-image: unset;
+}
+.playlistbox .headerbox .userbox .user {
+  display: flex;
+  width: 166px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6431372549);
+  border-radius: 50px;
+  padding: 2px;
+  height: 30px;
+  justify-content: space-between;
+}
+.playlistbox .headerbox .userbox .user .icon {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-radius: 50px;
+  text-align: center;
+  padding: 3px 2px;
+  width: 28px;
+  height: 100%;
+}
+.playlistbox .headerbox .userbox .user .infobox {
+  color: #fff;
+  width: auto;
+  font-size: 15px;
+  padding-left: 8px;
+  font-family: AvenirLTStd-Heavy;
+  display: flex;
+  align-items: center;
+}
+.playlistbox .headerbox .userbox .user .infobox .name {
+  padding-right: 8px;
+}
+.playlistbox .headerbox .userbox .user .arrow ion-icon {
+  color: #fff;
+  font-size: 17px;
+}
+.playlistbox .singerhead {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 16rem;
+  padding-top: 15px;
+  padding-left: 27px;
+  cursor: pointer;
+}
+.playlistbox .singerhead .cover {
+  flex: 1.4;
+  height: 93%;
+}
+.playlistbox .singerhead .cover img {
+  width: 90%;
+  height: 95%;
+  filter: drop-shadow(4px 5px 8px rgba(0, 0, 0, 0.231372549));
+}
+.playlistbox .singerhead .infobox {
+  flex: 5;
+  text-align: left;
+  cursor: pointer;
+}
+.playlistbox .singerhead .infobox .veribox {
+  font-family: AvenirLTStd-Heavy;
+  color: #ffffff;
+  font-size: 11px;
+}
+.playlistbox .singerhead .infobox .name {
+  color: #ffffff;
+  font-family: AvenirLTStd-Black;
+  font-weight: bold;
+}
+.playlistbox .singerhead .infobox .desc {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 13px;
+  font-weight: 100;
+  color: rgba(228, 228, 228, 0.4039215686);
+}
+.playlistbox .singerhead .infobox .listenbox {
+  display: flex;
+  align-items: center;
+  font-family: AvenirLTStd-Heavy;
+  padding-top: 10px;
+}
+.playlistbox .singerhead .infobox .listenbox div {
+  width: auto;
+  padding-right: 7px;
+  font-size: 13px;
+  color: #e4e4e4;
+}
+.playlistbox .playlistfooter {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.1529411765) 0%, #0f0f0f 84%);
+  padding: 20px 25px;
+}
+.playlistbox .playlistfooter .playboxmusic {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 12%;
+}
+.playlistbox .playlistfooter .playboxmusic .play {
+  flex: 1;
+  padding-right: 25px;
+}
+.playlistbox .playlistfooter .playboxmusic .play ion-icon {
+  padding: 13px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #1ed760;
+  text-align: center;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0));
+}
+.playlistbox .playlistfooter .playboxmusic .heart {
+  flex: 1;
+  color: #adadad;
+  font-size: 40px;
+  cursor: pointer;
+}
+.playlistbox .trackbox {
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+}
+.playlistbox .trackbox .titlebox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.5px solid rgba(117, 117, 117, 0.3019607843);
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+.playlistbox .trackbox .titlebox .firstbox {
+  flex: 1.5;
+}
+.playlistbox .trackbox .titlebox div {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 12px;
+  color: #999999;
+}
+.playlistbox .trackbox .titlebox div ion-icon {
+  font-size: 20px;
+}
+.playlistbox .trackbox .titlebox .twobox {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.playlistbox .trackbox .tracklist {
+  margin: 20px auto;
+  width: 100%;
+  height: auto;
+}
+.playlistbox .trackbox .tracklist .track:hover {
+  background-color: rgba(173, 173, 173, 0.1843137255);
+}
+.playlistbox .trackbox .tracklist .track:hover .firstbox .play {
+  color: #fff;
+}
+.playlistbox .trackbox .tracklist .track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 8px;
+}
+.playlistbox .trackbox .tracklist .track .firstbox {
+  display: flex;
+  align-items: center;
+  flex: 1.5;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .play {
+  color: rgba(255, 255, 255, 0.5725490196);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 16px;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .number {
+  color: rgba(255, 255, 255, 0.5725490196);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 15px;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .cover {
+  padding-left: 15px;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .infobox {
+  padding-left: 14px;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .infobox .name {
+  display: inline-block;
+  overflow: hidden;
+  height: 15px;
+  font-size: 13.2px;
+  max-width: 100%;
+  font-family: AvenirLTStd-Heavy;
+}
+.playlistbox .trackbox .tracklist .track .firstbox .infobox .singer {
+  color: rgba(255, 255, 255, 0.4901960784);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.playlistbox .trackbox .tracklist .track .albumbox {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 12px;
+  flex: 1.1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+.playlistbox .trackbox .tracklist .track .datebox {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 12px;
+}
+.playlistbox .trackbox .tracklist .track .timebox {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-family: AvenirLTStd-Heavy;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 1024px) {
+  .singerhead {
+    height: auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    margin: 55px auto !important;
+    width: 94% !important;
+  }
+  .singerhead .cover {
+    margin: 20px auto !important;
+    width: 50% !important;
+  }
+  .singerhead .cover img {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .singerhead .infobox {
+    padding-top: 0 !important;
+  }
+  .singerhead .infobox .type {
+    font-size: 15px !important;
+  }
+  .singerhead .infobox .name {
+    padding: 15px 0 !important;
+    font-size: 30px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .playlistfooter {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 15px !important;
+  }
+  .playlistfooter .albumbox,
+  .playlistfooter .datebox,
+  .playlistfooter .timebox {
+    display: none;
+  }
+  .album,
+  .date,
+  .time {
+    display: none !important;
+  }
+}/*# sourceMappingURL=Playlist.css.map */

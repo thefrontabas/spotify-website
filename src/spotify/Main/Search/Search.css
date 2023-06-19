@@ -1,0 +1,421 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../home/font/AvenirLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../home/font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("../font/AvenirLTStd-Light.otf");
+}
+.searchbox {
+  background: linear-gradient(180deg, rgb(19, 18, 18) 0%, rgb(14, 13, 13) 100%);
+  padding: 14px 20px !important;
+  height: 100% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+.searchbox .inpbox .searchinputbox {
+  display: none;
+}
+.searchbox .headerbox,
+.searchbox .inpbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchbox .headerbox .arrowbox,
+.searchbox .inpbox .arrowbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+.searchbox .headerbox .arrowbox .back,
+.searchbox .headerbox .arrowbox .forw,
+.searchbox .inpbox .arrowbox .back,
+.searchbox .inpbox .arrowbox .forw {
+  margin-right: 12px;
+  border-radius: 50px;
+  color: #e0e0e0;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  font-size: 21px;
+}
+.searchbox .headerbox .searchinputbox,
+.searchbox .inpbox .searchinputbox {
+  flex: 10;
+}
+.searchbox .headerbox .searchinputbox .inputbox,
+.searchbox .inpbox .searchinputbox .inputbox {
+  border-radius: 50px;
+  cursor: pointer;
+  width: 44%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 5px 8px;
+  height: 40px;
+  background-color: #fff;
+}
+.searchbox .headerbox .searchinputbox .inputbox .icon,
+.searchbox .inpbox .searchinputbox .inputbox .icon {
+  flex: 0.5;
+  font-size: 20px;
+  color: #000;
+}
+.searchbox .headerbox .searchinputbox .inputbox .input,
+.searchbox .inpbox .searchinputbox .inputbox .input {
+  flex: 5;
+}
+.searchbox .headerbox .searchinputbox .inputbox .input input,
+.searchbox .inpbox .searchinputbox .inputbox .input input {
+  outline: none;
+  border: 0;
+  color: #000;
+}
+.searchbox .headerbox .searchinputbox .inputbox .input ::-moz-placeholder, .searchbox .inpbox .searchinputbox .inputbox .input ::-moz-placeholder {
+  font-family: AvenirLTStd-Black;
+  font-size: 13px;
+  color: #777777;
+}
+.searchbox .headerbox .searchinputbox .inputbox .input :-ms-input-placeholder, .searchbox .inpbox .searchinputbox .inputbox .input :-ms-input-placeholder {
+  font-family: AvenirLTStd-Black;
+  font-size: 13px;
+  color: #777777;
+}
+.searchbox .headerbox .searchinputbox .inputbox .input ::placeholder,
+.searchbox .inpbox .searchinputbox .inputbox .input ::placeholder {
+  font-family: AvenirLTStd-Black;
+  font-size: 13px;
+  color: #777777;
+}
+.searchbox .headerbox .userbox,
+.searchbox .inpbox .userbox {
+  flex: 1;
+  background-image: unset;
+  cursor: pointer;
+}
+.searchbox .headerbox .userbox .logoutbox,
+.searchbox .inpbox .userbox .logoutbox {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: #292828;
+  border-radius: 3px;
+  width: 10rem;
+  height: 2.7rem;
+  cursor: pointer;
+  padding: 5px 0;
+  color: #d3d2d2;
+}
+.searchbox .headerbox .userbox .logoutbox .logout,
+.searchbox .inpbox .userbox .logoutbox .logout {
+  padding: 4px 10px;
+  width: 100%;
+  height: 30px;
+}
+.searchbox .headerbox .userbox .logoutbox .logout:hover,
+.searchbox .inpbox .userbox .logoutbox .logout:hover {
+  background-color: rgba(104, 104, 104, 0.1921568627);
+  transition: all ease 0.5s;
+}
+.searchbox .headerbox .userbox .user,
+.searchbox .inpbox .userbox .user {
+  display: flex;
+  width: auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6431372549);
+  border-radius: 50px;
+  padding: 2px;
+  justify-content: space-between;
+  height: 30px;
+}
+.searchbox .headerbox .userbox .user .icon,
+.searchbox .inpbox .userbox .user .icon {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-radius: 50px;
+  text-align: center;
+  padding: 3px 2px;
+  width: 28px;
+  height: 100%;
+}
+.searchbox .headerbox .userbox .user .infobox,
+.searchbox .inpbox .userbox .user .infobox {
+  color: #fff;
+  width: auto;
+  font-size: 15px;
+  padding-left: 8px;
+  font-family: AvenirLTStd-Heavy;
+  display: flex;
+  align-items: center;
+}
+.searchbox .headerbox .userbox .user .infobox .name,
+.searchbox .inpbox .userbox .user .infobox .name {
+  padding-right: 8px;
+}
+.searchbox .headerbox .userbox .user .arrow ion-icon,
+.searchbox .inpbox .userbox .user .arrow ion-icon {
+  color: #fff;
+  font-size: 17px;
+}
+.searchbox .flex {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 50px 0;
+}
+.searchbox .flex .topbox {
+  flex: 3.4;
+}
+.searchbox .flex .topbox .tophead {
+  font-family: AvenirLTStd-Black;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 23px;
+  font-weight: bold;
+}
+.searchbox .flex .topbox .topcard {
+  background-color: #181818;
+  border-radius: 4px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.0392156863));
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  padding: 21px 23px;
+  margin-top: 20px;
+}
+.searchbox .flex .topbox .topcard .cover {
+  width: 100px;
+  height: 100px;
+}
+.searchbox .flex .topbox .topcard .cover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.searchbox .flex .topbox .topcard .name {
+  color: #e0dddd;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 10px 0;
+}
+.searchbox .flex .topbox .topcard .title {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2745098039);
+  border-radius: 30px;
+  padding: 2px 5px;
+  width: 18%;
+  text-align: center;
+}
+.searchbox .flex .songbox {
+  flex: 5;
+  padding-left: 20px;
+}
+.searchbox .flex .songbox .songhead {
+  font-family: AvenirLTStd-Black;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 23px;
+  font-weight: bold;
+}
+.searchbox .flex .songbox .songcard {
+  padding-top: 15px;
+  width: 100%;
+  height: auto;
+}
+.searchbox .flex .songbox .songcard .song:hover {
+  background-color: rgba(77, 77, 77, 0.4117647059);
+}
+.searchbox .flex .songbox .songcard .song {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 94%;
+  margin: 0px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 3px 9px;
+  height: auto;
+}
+.searchbox .flex .songbox .songcard .song .cover {
+  flex: 0.5;
+  background-size: cover;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.searchbox .flex .songbox .songcard .song .cover .back {
+  background-color: rgba(0, 0, 0, 0.6235294118);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+  color: #fff;
+  font-size: 19px;
+  padding-top: 10px;
+  justify-content: center;
+}
+.searchbox .flex .songbox .songcard .song .infobox {
+  text-align: left;
+  flex: 5;
+  padding-left: 12px;
+  color: #fff;
+}
+.searchbox .flex .songbox .songcard .song .infobox .singer {
+  color: #aaaaaa;
+  font-size: 13px;
+  padding-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchbox .flex .songbox .songcard .song .infobox .name {
+  color: #fff;
+  font-size: 15px;
+  font-family: AvenirLTStd-Light;
+  font-weight: 500;
+  height: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchbox .flex .songbox .songcard .song .time {
+  color: #a0a0a0;
+  flex: 1;
+  font-size: 14px;
+  text-align: right;
+}
+.searchbox .artbox {
+  width: 100%;
+  height: auto;
+}
+.searchbox .artbox .arthead {
+  font-family: AvenirLTStd-Black;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 23px;
+  font-weight: bold;
+}
+.searchbox .artbox .generbox {
+  width: 100% !important;
+  margin: 15px 0;
+  height: 17rem;
+  padding: 0;
+}
+.searchbox .artbox .generbox .generswiper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.searchbox .artbox .generbox .generswiper .generslide:hover .play #icon {
+  opacity: 1;
+  transition: all ease-out 1s;
+}
+.searchbox .artbox .generbox .generswiper .generslide:hover {
+  background-color: #1f1e1e;
+  transition: all ease 1s;
+}
+.searchbox .artbox .generbox .generswiper .generslide {
+  width: 9.5rem !important;
+  border-radius: 6px;
+  height: 13rem;
+  background-color: #181818;
+  margin-right: 22px;
+  filter: drop-shadow(1px 2px 18px rgba(24, 24, 24, 0.6862745098));
+  cursor: pointer;
+  padding: 12px;
+}
+.searchbox .artbox .generbox .generswiper .generslide .cover {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+}
+.searchbox .artbox .generbox .generswiper .generslide .cover img {
+  cursor: pointer;
+  width: 100%;
+  height: 8rem;
+  border-radius: 3px;
+  filter: drop-shadow(1px 5px 12px rgba(0, 0, 0, 0.555));
+}
+.searchbox .artbox .generbox .generswiper .generslide .infobox {
+  text-align: left;
+  padding-top: 6px;
+}
+.searchbox .artbox .generbox .generswiper .generslide .infobox .name,
+.searchbox .artbox .generbox .generswiper .generslide .infobox .singer:hover {
+  text-decoration: underline;
+}
+.searchbox .artbox .generbox .generswiper .generslide .infobox .name {
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: AvenirLTStd-Heavy;
+  text-decoration: none;
+}
+.searchbox .artbox .generbox .generswiper .generslide .infobox .singer {
+  color: #969696;
+  font-size: 13px;
+  padding-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 1024px) {
+  .inpbox .searchinputbox {
+    display: inline-block !important;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+  }
+  body .searchbox {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .flex {
+    flex-direction: column !important;
+    margin: 60px auto !important;
+  }
+  .flex .songbox {
+    margin-top: 40px !important;
+    padding: 0 !important;
+  }
+  .flex .songbox .song .name {
+    white-space: inherit !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+  }
+}
+.inpbox {
+  padding-top: 50px !important;
+}
+.inpbox .inputbox {
+  width: 100% !important;
+}
+.inpbox .inputbox input {
+  width: 100% !important;
+}/*# sourceMappingURL=Search.css.map */

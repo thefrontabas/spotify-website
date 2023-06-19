@@ -1,0 +1,148 @@
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("./font/AvenirLTStd-Heavy.otf");
+}
+
+.App {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 18% 82%;
+  grid-template-rows: 100% 100%;
+  color: #000;
+  .loadbox {
+    text-align: center;
+    position: fixed;
+    right: 0;
+    background: linear-gradient(to bottom, #1f1f1f 0%, rgba(15, 15, 15, 1) 44%);
+    width: 82%;
+    z-index: 300;
+    height: 100%;
+    padding-top: 14rem;
+    img {
+      width: 70px;
+      cursor: pointer;
+    }
+  }
+  .menu {
+    background-color: #010101;
+    padding-top: 26px;
+    padding-left: 20px;
+    cursor: pointer;
+    height: 100%;
+    .logo {
+      padding-bottom: 14px;
+      width: 100%;
+      img {
+        width: 120px;
+        cursor: pointer;
+      }
+    }
+    .artbox {
+      text-align: left;
+      padding-bottom: 20px;
+      width: 100%;
+      .link:hover {
+        color: #fff;
+        transition: all ease 1s;
+      }
+      .link {
+        display: flex;
+        font-family: AvenirLTStd-Heavy;
+        align-items: center;
+        width: 100%;
+        margin-top: 25px;
+        color: rgb(192, 192, 192);
+        font-size: 14px;
+      }
+    }
+    .linkbox {
+      text-align: left;
+      padding-bottom: 20px;
+      .link:hover {
+        color: #fff;
+        transition: all ease 1s;
+      }
+      .link {
+        display: flex;
+        font-family: AvenirLTStd-Heavy;
+        align-items: center;
+        width: 100%;
+        margin-top: 9px;
+        color: #c0c0c0;
+        font-size: 14px;
+        .icon {
+          padding-right: 11px;
+          font-size: 25px;
+        }
+        a {
+          color: rgb(192, 192, 192);
+          font-size: 14px;
+          text-decoration: none;
+        }
+      }
+    }
+    .border {
+      background-color: rgba(155, 155, 155, 0.185);
+      border: 0;
+      width: 91%;
+      height: 0.1px;
+    }
+  }
+
+  .menuhead {
+    width: 100%;
+    height: 50px;
+    padding: 10px 6px;
+    z-index: 200;
+    position: absolute;
+    display: none !important;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      flex: 4;
+      text-align: left;
+      img {
+        width: 140px;
+        cursor: pointer;
+      }
+    }
+    .lastbox {
+      display: flex;
+      flex: 0.5;
+      align-items: center;
+      .icon {
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+  .App {
+    grid-template-columns: 100% !important;
+    .menuhead {
+      display: flex !important;
+    }
+  }
+  .menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .menuhead {
+    .logo img {
+      width: 170px !important;
+    }
+    .lastbox .icon {
+      font-size: 50px !important;
+    }
+  }
+}
