@@ -12,7 +12,7 @@
   src: url("./font/AvenirLTStd-Light.otf");
 }
 .playbox {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -164,7 +164,7 @@
   }
 }
 
-@media only screen and(min-width:820px) and (max-width: 1025px) {
+@media only screen and (min-width: 820px) and (max-width: 1025px) {
   .playbox {
     .firstbox {
       flex: 2.5 !important;
