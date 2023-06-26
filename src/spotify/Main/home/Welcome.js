@@ -71,44 +71,42 @@ export default function Welcome(props) {
       <div className="welbox">
         <div className="welhead">Good {text}</div>
         <div className="welflex">
-          {art.map((item, index) => {
-            if (index > 0 && index <= 6) {
-              return (
-                <div
-                  className="welmusic"
-                  title={item.name}
-                  onMouseEnter={() => hover(item.images[0].url)}
-                  key={index}
-                >
-                  <div className="cover">
-                    <NavLink to={`/Artist/${item.id}`}>
-                      <img src={item.images[0].url} />
-                    </NavLink>
-                  </div>
-                  <div className="infobox">
-                    <NavLink
-                      to={`/Artist/${item.id}`}
-                      style={{
-                        textDecoration: "none",
-                      }}
-                    >
-                      <div className="name">{item.name}</div>
-                    </NavLink>
-                  </div>
-
-                  <div className="play">
-                    <NavLink
-                      to={`/Artist/${item.id}`}
-                      style={{
-                        textDecoration: "none",
-                      }}
-                    >
-                      <ion-icon id="icon" name="play"></ion-icon>
-                    </NavLink>
-                  </div>
+          {art.slice(0, 6).map((item, index) => {
+            return (
+              <div
+                className="welmusic"
+                title={item.name}
+                onMouseEnter={() => hover(item.images[0].url)}
+                key={index}
+              >
+                <div className="cover">
+                  <NavLink to={`/Artist/${item.id}`}>
+                    <img src={item.images[0].url} />
+                  </NavLink>
                 </div>
-              );
-            }
+                <div className="infobox">
+                  <NavLink
+                    to={`/Artist/${item.id}`}
+                    style={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    <div className="name">{item.name}</div>
+                  </NavLink>
+                </div>
+
+                <div className="play">
+                  <NavLink
+                    to={`/Artist/${item.id}`}
+                    style={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    <ion-icon id="icon" name="play"></ion-icon>
+                  </NavLink>
+                </div>
+              </div>
+            );
           })}
         </div>
       </div>
