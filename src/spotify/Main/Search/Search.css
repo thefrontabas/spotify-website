@@ -89,11 +89,6 @@
   font-size: 13px;
   color: #777777;
 }
-.searchbox .headerbox .searchinputbox .inputbox .input :-ms-input-placeholder, .searchbox .inpbox .searchinputbox .inputbox .input :-ms-input-placeholder {
-  font-family: AvenirLTStd-Black;
-  font-size: 13px;
-  color: #777777;
-}
 .searchbox .headerbox .searchinputbox .inputbox .input ::placeholder,
 .searchbox .inpbox .searchinputbox .inputbox .input ::placeholder {
   font-family: AvenirLTStd-Black;
@@ -251,13 +246,14 @@
   cursor: pointer;
   border-radius: 3px;
   padding: 3px 9px;
-  height: auto;
+  height: 48px;
 }
 .searchbox .flex .songbox .songcard .song .cover {
   flex: 0.5;
   background-size: cover;
-  height: 40px;
-  background-position: center;
+  border-radius: 5px;
+  height: 45px;
+  background-position: top;
   background-repeat: no-repeat;
 }
 .searchbox .flex .songbox .songcard .song .cover .back {

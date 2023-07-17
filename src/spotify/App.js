@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Player from "./Main/Player/Player";
+import Loading from "./Main/Asset/Loding";
 const Home = lazy(() => import("./Main/home/Home"));
 const Content = lazy(() => import("./Main/home/View/Content"));
 const Result = lazy(() => import("./Main/result/Result"));
@@ -49,7 +50,7 @@ export default function App(params) {
   }, []);
   return (
     <>
-      <Suspense fallback={<>Loading</>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="" element={<Home />} exact>
             <Route path="" element={<Content />} />

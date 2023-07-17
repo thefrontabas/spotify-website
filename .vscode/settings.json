@@ -3,5 +3,10 @@
 	"editor.formatOnSave": true,
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#442614",
+		"titleBar.activeBackground": "#5F351D",
+		"titleBar.activeForeground": "#FDFAF9"
 	}
 }

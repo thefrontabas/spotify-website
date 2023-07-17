@@ -8,8 +8,6 @@ import { actfunc, playfunc, resultfunc } from "../../../Redux/Home";
 import loading from "../../Asset/loading.gif";
 import mainApi from "../../Api/Api";
 export default function Gener(props) {
-
-
   const [music, setmusic] = useState([]);
   const [show, setshow] = useState(true);
 
